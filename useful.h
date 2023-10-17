@@ -17,7 +17,11 @@
 // 交換
 #define SWAP(a, b, t) (t = a, a = b, b = t)
 
-// 比較大小
+/**
+ * @brief 比較數字 a>b輸出1,a=b 輸出0 a<b 輸出-1
+ * @param a 
+ * @param b 
+ */
 #define COMPARE(a, b) (a > b ? 1 : (a < b ? -1 : 0))
 
 // 分配記憶體空間

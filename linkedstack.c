@@ -63,6 +63,7 @@ void stack_print(int i)
     }
     printf("\n"); 
 }
+// TODO :測試把pop 到元素空為止
 int main()
 {
     Stack_init(); 
@@ -75,7 +76,12 @@ int main()
     e.data = 4 ;     push(0,e) ;
 
     pop(0); 
-    e.data = 5 ;     push(0,e) ;
+    pop(0); 
+    pop(0); 
+    // pop(0); 
+    // pop(0); 
+
+    // e.data = 5 ;     push(0,e) ;
 
     stack_print(0); 
     return  0; 
