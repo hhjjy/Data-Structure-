@@ -100,39 +100,32 @@ void mmult(terms A[],terms B[] , terms D[])
 {
     // 2*3 *3 *2 
     // Fast transpose 
-    FastTranspose(B); 
-    int rows_A = A[0].row ; 
-    int cols_A = A[0].col ; 
-    int rows_B = B[0].row ;
-    int cols_B = B[0].col ; 
-    int RowTermA[TERM_MAX] ={0};
-    int RowTermB[TERM_MAX] ={0};
-
-    int StartPosA[TERM_MAX] ={0};
-    int StartPosB[TERM_MAX] ={0};
+    terms newB[TERM_MAX] ; 
+    m_init(newB,B[0].col,B[0].row) ;
+    FastTranspose(B,newB);
+    int totalA = A[0].value, totalB = B[0].value ,cols_A = A[0].col ,rows_B = newB[0].row;
     if (cols_A != rows_B)
         return ; // error 
-    m_init(D,rows_A,cols_B) ; 
-    // 先找各自的項
-    for(int i = 1 ; i <= A[0].value; i ++)    
+    m_init(D,A[0].row,B[0].col) ; 
+
+    // Row 0 * Row 0 
+    for(int i = 1 ; i <=totalA ; i ++) // D[]
     {
-        RowTermA[A[i].row] ++ ; 
-    }
-    for(int i = 1 ; i <= B[0].value; i ++)    
-    {
-        RowTermA[B[i].row] ++ ; 
-    }
-    StartPosA[0] = 1 ; 
-    StartPosB[0] = 1 ; 
-    for(int i = 1 ; i < A[0].value ; i ++)
-    {
-        StartPosA[i] = StartPosA[i-1] + RowTermA[i-1];
-    }
-    for(int i = 1 ; i < B[0].value ; i ++)
-    {
-        StartPosB[i] = StartPosB[i-1] + RowTermB[i-1];
-    }
-    for(int i = 0 ; i < )
+        int current_row = A[i].row ;  
+        int current_col = A[i].col ; 
+        int sum = 0 ; 
+        // D[].row = rowofA
+        // D[].col = colofB
+          
+        for(int j = 1 ; j <= totalB ; j ++)
+        {
+        
+            // RowA * RowB => 
+            if (newB[j].row == current_row && )
+
+
+        }
+    }    
 
 }
 /**
