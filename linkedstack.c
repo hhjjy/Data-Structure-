@@ -63,6 +63,12 @@ void stack_print(int i)
     }
     printf("\n"); 
 }
+element stack_get_top(int i)
+{
+    if (TOP[i] == NULL)
+        return EMPYT ;  
+    return TOP[i]->data ; 
+}
 // TODO :測試把pop 到元素空為止
 int main()
 {
