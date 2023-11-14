@@ -137,8 +137,7 @@ void mmult(terms A[], terms B[], terms D[])
             {
                 storeSum(D, row, col, &sum); // row , col(newB row)
                 i = row_begin;               // 重頭跑A[1]開始
-                for (; newB[j].row == col; j++)
-                    ; // 找到row == column的下一個目標
+                for (; newB[j].row == col; j++); // 找到row == column的下一個目標
                 col = newB[j].row;
             }
             else if (newB[j].row != col) // 如果不在rowB 當前計算的位置 代表跑完
