@@ -8,13 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-<<<<<<< HEAD
       "cwd": "/home/chunchun/Desktop/Data-Structure-/final",
       "program": "/home/chunchun/Desktop/Data-Structure-/final/build/Debug/outDebug",
-=======
-      "cwd": "/Users/chunchun/Desktop/程式/Data-Structure-",
-      "program": "/Users/chunchun/Desktop/程式/Data-Structure-/build/Debug/outDebug",
->>>>>>> origin
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
